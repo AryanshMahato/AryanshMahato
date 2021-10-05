@@ -1,4 +1,4 @@
-### Hello, Aryansh here 👋
+### Hello, Aryansh here <img src="https://github.com/TheDudeThatCode/TheDudeThatCode/blob/master/Assets/Hi.gif" width="22px">
 
 [![Website](https://img.shields.io/website?label=aryansh.dev&style=for-the-badge&url=https%3A%2F%2Fcodestackr.com)](https://aryansh.dev)
 [![Twitter Follow](https://img.shields.io/twitter/follow/AryanshMahato?color=1DA1F2&logo=twitter&style=for-the-badge)](https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fgithub.com%2FAryanshMahato&screen_name=AryanshMahato)
