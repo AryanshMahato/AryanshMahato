@@ -1,0 +1,27 @@
+.root {
+  background: #ffffff;
+  width: 100vw;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.annotation {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.socialHandles {
+  flex-flow: row;
+  width: 200px;
+  justify-content: space-around;
+  svg {
+    transition: 0.1s;
+    color: #2c3335;
+    &:hover {
+      color: #716c6c;
+    }
+  }
+}

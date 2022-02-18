@@ -1,4 +1,7 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "portfolio-ui": "packages/portfolio-ui",
+    "portfolio-ui-e2e": "packages/portfolio-ui-e2e"
+  }
 }
