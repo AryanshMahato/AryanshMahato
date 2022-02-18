@@ -1,0 +1,41 @@
+@import "/Global/SASS/variables";
+
+.socialHandles {
+  display: flex;
+  list-style: none;
+  flex-flow: column;
+  height: 100%;
+  align-items: center;
+
+  @include desktop-view {
+    flex-flow: row;
+  }
+}
+
+.socialHandle {
+  margin: 0.5rem 0;
+
+  a {
+    text-decoration: none;
+    color: black;
+    height: 2rem;
+    width: 2rem;
+  }
+
+  svg {
+    height: 2rem;
+    width: 2rem;
+    color: colors(grey);
+    transition: 0.2s;
+  }
+
+  svg:hover {
+    height: 100%;
+    width: 2rem;
+    color: colors(light);
+  }
+
+  @include desktop-view {
+    margin: 0 0.5rem;
+  }
+}
