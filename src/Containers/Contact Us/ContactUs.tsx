@@ -46,7 +46,7 @@ export default () => {
 					formSubmitted={formSubmitHandler}
 					resetForm={resetForm}
 				/>
-				<img src={Undraw} alt="" className={classes.image} />
+				<img src={Undraw.src} alt="" className={classes.image} />
 			</div>
 		</div>
 	);

@@ -2,7 +2,13 @@ import React from 'react';
 import Particle from 'react-tsparticles';
 import { ISourceOptions } from 'tsparticles';
 
-const params: ISourceOptions = {
+const options: ISourceOptions = {
+	background: {
+		color: {
+			value: '#2C3335',
+		},
+	},
+	fpsLimit: 60,
 	particles: {
 		number: {
 			value: 100,
@@ -71,8 +77,7 @@ const params: ISourceOptions = {
 			},
 		},
 	},
-
-	// retina_detect: true
+	detectRetina: true,
 };
 
 export default function ParticleBackground() {
@@ -87,7 +92,7 @@ export default function ParticleBackground() {
 				left: 0,
 			}}
 		>
-			<Particle params={params} height="100vh" width="100vw" />
+			<Particle options={options} height="100vh" width="100vw" />
 		</div>
 	);
 }

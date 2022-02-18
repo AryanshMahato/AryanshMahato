@@ -39,7 +39,11 @@ export default ({ project }: ProjectProps) => {
 				onMouseLeave={hoverEnded}
 				onClick={hoverStarted}
 			>
-				<img src={project.image} alt={project.name} className={classes.image} />
+				<img
+					src={project.image.src}
+					alt={project.name}
+					className={classes.image}
+				/>
 				<div className={buttonClass}>
 					<GithubLink githubLink={project.githubLink} />
 					<LiveLink liveLink={project.liveLink} />
