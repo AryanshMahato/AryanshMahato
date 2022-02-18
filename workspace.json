@@ -1,6 +1,8 @@
 {
   "version": 2,
   "projects": {
+    "blog-ui": "packages/blog-ui",
+    "blog-ui-e2e": "packages/blog-ui-e2e",
     "portfolio-ui": "packages/portfolio-ui",
     "portfolio-ui-e2e": "packages/portfolio-ui-e2e"
   }
