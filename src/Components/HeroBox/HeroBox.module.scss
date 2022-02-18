@@ -1,0 +1,84 @@
+@import "src/Global/SASS/variables";
+
+.herBoxContainer {
+  position: relative;
+  height: 100vh;
+  @include desktop-view {
+    // Subtracts NavBar height to get full Viewport Height
+    height: calc(100vh - 80px);
+  }
+}
+
+.herBox {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  height: 95vh;
+  margin-left: 1.5rem;
+  font-family: "Open Sans", "sans-serif";
+  font-weight: bold;
+  color: colors(white);
+  transition: 0.2s;
+  @include tab-view {
+    align-items: center;
+    margin-left: 0;
+  }
+  @include desktop-view {
+    height: 60vh;
+    margin-left: 0;
+    align-items: center;
+  }
+}
+
+.title {
+  font-size: 2rem;
+  span {
+    display: block;
+    background-image: -webkit-linear-gradient(
+      -60deg,
+      #bb2cd9,
+      #7cec9f,
+      #ea7773,
+      #e74292,
+      #53e0bc,
+      #e73c7e,
+      #74b9ff
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 1000%;
+    -webkit-animation: nameColor 10s infinite;
+  }
+  @include tab-view {
+    font-size: 3rem;
+    span {
+      display: inline;
+    }
+  }
+  @include desktop-view {
+    font-size: 4.4rem;
+  }
+}
+
+.description {
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  @include tab-view {
+    font-size: 2.5rem;
+  }
+  @include desktop-view {
+    font-size: 3.5rem;
+  }
+}
+
+@keyframes nameColor {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
