@@ -1,0 +1,13 @@
+@import "src/Global/SASS/variables";
+
+.annotation {
+  width: fit-content;
+  font-family: Roboto, "sans-serif";
+  font-size: 3rem;
+  color: #2e3336;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  @include tab-view {
+    font-size: 4rem;
+  }
+}
