@@ -1,0 +1,782 @@
+{
+  "graph": {
+    "nodes": {
+      "portfolio-ui-e2e": {
+        "name": "portfolio-ui-e2e",
+        "type": "e2e",
+        "data": {
+          "root": "packages/portfolio-ui-e2e",
+          "sourceRoot": "packages/portfolio-ui-e2e/src",
+          "projectType": "application",
+          "targets": {
+            "e2e": {
+              "executor": "@nrwl/cypress:cypress",
+              "options": {
+                "cypressConfig": "packages/portfolio-ui-e2e/cypress.json",
+                "devServerTarget": "portfolio-ui:serve"
+              },
+              "configurations": {
+                "production": {
+                  "devServerTarget": "portfolio-ui:serve:production"
+                }
+              }
+            },
+            "lint": {
+              "executor": "@nrwl/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "packages/portfolio-ui-e2e/**/*.{js,ts}"
+                ]
+              }
+            }
+          },
+          "tags": [],
+          "implicitDependencies": [
+            "portfolio-ui"
+          ],
+          "files": [
+            {
+              "file": "packages/portfolio-ui-e2e/.eslintrc.json",
+              "hash": "4c5989b23b5aa8cc7aba2a07d1ae7daee19c1555"
+            },
+            {
+              "file": "packages/portfolio-ui-e2e/cypress.json",
+              "hash": "18f19a49223ac3c64361aa4f44784e51cb9a4ab5"
+            },
+            {
+              "file": "packages/portfolio-ui-e2e/project.json",
+              "hash": "9db99e72743f6fd03924e0bd184261e8b6cab2b5"
+            },
+            {
+              "file": "packages/portfolio-ui-e2e/src/fixtures/example.json",
+              "hash": "294cbed6ce9e0b948b787452e8676aee486cb3be"
+            },
+            {
+              "file": "packages/portfolio-ui-e2e/src/integration/app.spec.ts",
+              "hash": "5e03554c3b0f48d3b57795bc42a4e4c3ec389787"
+            },
+            {
+              "file": "packages/portfolio-ui-e2e/src/support/app.po.ts",
+              "hash": "32934246969c2ecb827ac05677785933a707a54d"
+            },
+            {
+              "file": "packages/portfolio-ui-e2e/src/support/commands.ts",
+              "hash": "310f1fa0e043ffebbbcf575c5a4d17f13a6b14d6"
+            },
+            {
+              "file": "packages/portfolio-ui-e2e/src/support/index.ts",
+              "hash": "3d469a6b6cf31eb66117d73e278bcf74f398f1db"
+            },
+            {
+              "file": "packages/portfolio-ui-e2e/tsconfig.json",
+              "hash": "c4f818ecd40fbce82c3e08bf25cde3043970f8f3"
+            }
+          ]
+        }
+      },
+      "portfolio-ui": {
+        "name": "portfolio-ui",
+        "type": "app",
+        "data": {
+          "root": "packages/portfolio-ui",
+          "sourceRoot": "packages/portfolio-ui",
+          "projectType": "application",
+          "targets": {
+            "build": {
+              "executor": "@nrwl/next:build",
+              "outputs": [
+                "{options.outputPath}"
+              ],
+              "defaultConfiguration": "production",
+              "options": {
+                "root": "packages/portfolio-ui",
+                "outputPath": "dist/packages/portfolio-ui"
+              },
+              "configurations": {
+                "production": {}
+              }
+            },
+            "serve": {
+              "executor": "@nrwl/next:server",
+              "options": {
+                "buildTarget": "portfolio-ui:build",
+                "dev": true
+              },
+              "configurations": {
+                "production": {
+                  "buildTarget": "portfolio-ui:build:production",
+                  "dev": false
+                }
+              }
+            },
+            "export": {
+              "executor": "@nrwl/next:export",
+              "options": {
+                "buildTarget": "portfolio-ui:build:production"
+              }
+            },
+            "test": {
+              "executor": "@nrwl/jest:jest",
+              "outputs": [
+                "coverage/packages/portfolio-ui"
+              ],
+              "options": {
+                "jestConfig": "packages/portfolio-ui/jest.config.js",
+                "passWithNoTests": true
+              }
+            },
+            "lint": {
+              "executor": "@nrwl/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "packages/portfolio-ui/**/*.{ts,tsx,js,jsx}"
+                ]
+              }
+            }
+          },
+          "tags": [],
+          "files": [
+            {
+              "file": "packages/portfolio-ui/.eslintrc.json",
+              "hash": "d8e839e29baf7bde0530079ef4850b6f721f0d17"
+            },
+            {
+              "file": "packages/portfolio-ui/Assets/css.svg",
+              "hash": "d439f8491bb423f84669fd57e1068eb7ddde4581"
+            },
+            {
+              "file": "packages/portfolio-ui/Assets/html5-brands.svg",
+              "hash": "6ca9809fba6d2612bc21dd9d287fd5322b7d88ed"
+            },
+            {
+              "file": "packages/portfolio-ui/Assets/javascript.svg",
+              "hash": "c571e865cdf158203189c1f2c39e3ab7840ba169"
+            },
+            {
+              "file": "packages/portfolio-ui/Assets/merch-shop.png",
+              "hash": "ddb818914c0b1c9c0ffed788c4fb42a9560d72ce"
+            },
+            {
+              "file": "packages/portfolio-ui/Assets/node.png",
+              "hash": "5ba24d407685acab6470c35832d9a15f95e05048"
+            },
+            {
+              "file": "packages/portfolio-ui/Assets/react.svg",
+              "hash": "727f4514de211c253f14577cc8d693bbecdde050"
+            },
+            {
+              "file": "packages/portfolio-ui/Assets/typescript.svg",
+              "hash": "b836eae906646c71fd86e19c351dce3546629f62"
+            },
+            {
+              "file": "packages/portfolio-ui/Assets/Undraw.svg",
+              "hash": "aa47b0a16c0df80bcfc301a4fe51c9e18fae4c09"
+            },
+            {
+              "file": "packages/portfolio-ui/Components/Forms/ContactUsForm.module.scss",
+              "hash": "fd32f255d3422ad42c6a93ad385d60f5e8623937"
+            },
+            {
+              "file": "packages/portfolio-ui/Components/Forms/ContactUsForm.tsx",
+              "hash": "87f11d6dcba33266af0861df429a754d7b749355",
+              "deps": [
+                "npm:react",
+                "npm:react-icons"
+              ]
+            },
+            {
+              "file": "packages/portfolio-ui/Components/HeroBox/HeroBox.module.scss",
+              "hash": "a36139c7caa7597c19d7af106e8113ed2092108f"
+            },
+            {
+              "file": "packages/portfolio-ui/Components/HeroBox/HeroBox.tsx",
+              "hash": "b26c6a71bd2446b0d05c792bc3b9e5d160329d66",
+              "deps": [
+                "npm:react"
+              ]
+            },
+            {
+              "file": "packages/portfolio-ui/Components/NavBar/DesktopNav/DesktopNav.module.scss",
+              "hash": "4843d35fe8a6a129c1525b9a2c68eda9f09fb5f4"
+            },
+            {
+              "file": "packages/portfolio-ui/Components/NavBar/DesktopNav/DesktopNav.tsx",
+              "hash": "b8f2f93beef9b99e3664c89e8b690e405e0144cb",
+              "deps": [
+                "npm:react"
+              ]
+            },
+            {
+              "file": "packages/portfolio-ui/Components/NavBar/MobileNav/MobileNav.module.scss",
+              "hash": "c84c71fab1a4dcc1456e0a59dd0e4d33f2b6dbe4"
+            },
+            {
+              "file": "packages/portfolio-ui/Components/NavBar/MobileNav/MobileNav.tsx",
+              "hash": "1e645136ed21679bdd3dccb9b288ffc548c2b50d",
+              "deps": [
+                "npm:react",
+                "npm:react-icons"
+              ]
+            },
+            {
+              "file": "packages/portfolio-ui/Components/NavBar/MobileNav/MobileNavLinks/MobileNavLinks.module.scss",
+              "hash": "9adaa8ff1aba8cd203f8ba4a424275d748b922ac"
+            },
+            {
+              "file": "packages/portfolio-ui/Components/NavBar/MobileNav/MobileNavLinks/MobileNavLinks.tsx",
+              "hash": "4cc6b1ab932665357194e337e98928848bfa0e54",
+              "deps": [
+                "npm:react",
+                "npm:react-icons"
+              ]
+            },
+            {
+              "file": "packages/portfolio-ui/Components/NavBar/NavBar.module.scss",
+              "hash": "27500118c04e75f2189283aa598ca259200f5905"
+            },
+            {
+              "file": "packages/portfolio-ui/Components/NavBar/NavBar.tsx",
+              "hash": "eee373483bfcd9587d4ef02d2493c836f99201cd",
+              "deps": [
+                "npm:react"
+              ]
+            },
+            {
+              "file": "packages/portfolio-ui/Components/NavBar/NavLinks/NavLinks.module.scss",
+              "hash": "488c6caff2f86f4928677453180137b2ab48fe2f"
+            },
+            {
+              "file": "packages/portfolio-ui/Components/NavBar/NavLinks/NavLinks.tsx",
+              "hash": "52537bf0ddd7a31911fe393a15af307aa8dcf30b",
+              "deps": [
+                "npm:react"
+              ]
+            },
+            {
+              "file": "packages/portfolio-ui/Components/Particle Background/ParticleBackground.tsx",
+              "hash": "8cf5fe4ed872716173d1708741911b457e291d34",
+              "deps": [
+                "npm:react",
+                "npm:react-tsparticles"
+              ]
+            },
+            {
+              "file": "packages/portfolio-ui/Components/Project/Project.module.scss",
+              "hash": "52a95ec58dac503b23c9969ccc07cb5750a3bae6"
+            },
+            {
+              "file": "packages/portfolio-ui/Components/Project/Project.tsx",
+              "hash": "1ebc92d6adbd9611be9662d47112d95000433344",
+              "deps": [
+                "npm:react"
+              ]
+            },
+            {
+              "file": "packages/portfolio-ui/Components/ProjectLinks/GithubLink.tsx",
+              "hash": "33967941ace84501626732cacf708030e83be7a3",
+              "deps": [
+                "npm:react",
+                "npm:react-icons"
+              ]
+            },
+            {
+              "file": "packages/portfolio-ui/Components/ProjectLinks/LiveLink.tsx",
+              "hash": "e43464ca475757e1ab9917d4bdcbd0e223737847",
+              "deps": [
+                "npm:react",
+                "npm:react-icons"
+              ]
+            },
+            {
+              "file": "packages/portfolio-ui/Components/ProjectLinks/ProjectLink.module.scss",
+              "hash": "84ad7b35cc6b7edb83aec6dbb5ceb0e6dd2d2614"
+            },
+            {
+              "file": "packages/portfolio-ui/Components/Skills/Skills.module.scss",
+              "hash": "7380dc656a42391be61ce0cfc81a2005e36bc40b"
+            },
+            {
+              "file": "packages/portfolio-ui/Components/Skills/Skills.tsx",
+              "hash": "9f8831f619c0d014a64d039199304d8b4616332e",
+              "deps": [
+                "npm:react"
+              ]
+            },
+            {
+              "file": "packages/portfolio-ui/Components/Social Handles/SocialHandles.module.scss",
+              "hash": "834b6362e592087c0f84f4e31bfca6a7530d5fca"
+            },
+            {
+              "file": "packages/portfolio-ui/Components/Social Handles/SocialHandles.tsx",
+              "hash": "1f274fa2e5066d3a3f562928e2fc1d388ec70cfb",
+              "deps": [
+                "npm:react",
+                "npm:react-icons"
+              ]
+            },
+            {
+              "file": "packages/portfolio-ui/Containers/About/About.module.scss",
+              "hash": "d4ba904d93783201923530a07c76b60da8a234fa"
+            },
+            {
+              "file": "packages/portfolio-ui/Containers/About/About.tsx",
+              "hash": "7e4c59cbe31026b3eb7b74ff3992568a66bbdf35",
+              "deps": [
+                "npm:react"
+              ]
+            },
+            {
+              "file": "packages/portfolio-ui/Containers/Contact Us/ContactUs.module.scss",
+              "hash": "25b2d023986e6e11a2b0861e9184deb05811b202"
+            },
+            {
+              "file": "packages/portfolio-ui/Containers/Contact Us/ContactUs.tsx",
+              "hash": "1a1b3eb146e0f0aae1af72ca09199006668e8363",
+              "deps": [
+                "npm:react",
+                "npm:emailjs-com"
+              ]
+            },
+            {
+              "file": "packages/portfolio-ui/Containers/Footer/Footer.module.scss",
+              "hash": "981efc147c9c5e1ab71ab734892565f3e10d8515"
+            },
+            {
+              "file": "packages/portfolio-ui/Containers/Footer/Footer.tsx",
+              "hash": "c4db3424d95079e6ee62fd8b3662609904e50905",
+              "deps": [
+                "npm:react"
+              ]
+            },
+            {
+              "file": "packages/portfolio-ui/Containers/Projects/Projects.module.scss",
+              "hash": "e3887ff37824e123d68d48aff7ce8d0a6bdbf4b9"
+            },
+            {
+              "file": "packages/portfolio-ui/Containers/Projects/Projects.tsx",
+              "hash": "83bfaccd6a29ef00048876516ebb48e3397ac0e2",
+              "deps": [
+                "npm:react"
+              ]
+            },
+            {
+              "file": "packages/portfolio-ui/Containers/Scroll Pop Up/ScrollPopUp.module.scss",
+              "hash": "497acf941ea066319eb4f15d555e13fd1f96681d"
+            },
+            {
+              "file": "packages/portfolio-ui/Containers/Scroll Pop Up/ScrollPopUp.tsx",
+              "hash": "ab3bfe096a2eea133831782ecadb0f1b14e33b4f",
+              "deps": [
+                "npm:react",
+                "npm:react-icons"
+              ]
+            },
+            {
+              "file": "packages/portfolio-ui/Containers/Skills List/SkillsList.module.scss",
+              "hash": "08fac9cbe9bd0f8bed48572bf756c28ad4a6e95f"
+            },
+            {
+              "file": "packages/portfolio-ui/Containers/Skills List/SkillsList.tsx",
+              "hash": "9f217a67772219dc74709f297ead1fdbd2819ad6",
+              "deps": [
+                "npm:react"
+              ]
+            },
+            {
+              "file": "packages/portfolio-ui/Data/Skills.ts",
+              "hash": "506103af6eee38551c5f2d2285918f853958368d"
+            },
+            {
+              "file": "packages/portfolio-ui/global.css",
+              "hash": "7495b7f15a6745629840676119b3f99f0e62c6d0"
+            },
+            {
+              "file": "packages/portfolio-ui/Global/Backdrop/Backdrop.module.scss",
+              "hash": "c07875daa5ff6f1f7787d26aa0c02c155b769564"
+            },
+            {
+              "file": "packages/portfolio-ui/Global/Backdrop/Backdrop.tsx",
+              "hash": "a48d74ca4bf879676ff217a431ec46ebd2a233a8",
+              "deps": [
+                "npm:react"
+              ]
+            },
+            {
+              "file": "packages/portfolio-ui/Global/Background/Background.tsx",
+              "hash": "aba044a622ea7e98083b6f3f7f9167cf26db9f61",
+              "deps": [
+                "npm:react"
+              ]
+            },
+            {
+              "file": "packages/portfolio-ui/Global/Buttons/Buttons.module.scss",
+              "hash": "ca62320351f4caf8631c86b57b1b714a8a195197"
+            },
+            {
+              "file": "packages/portfolio-ui/Global/Buttons/ReadMoreButton.tsx",
+              "hash": "44805cbb50f903a1028570a0ba624af8966ecd92",
+              "deps": [
+                "npm:react"
+              ]
+            },
+            {
+              "file": "packages/portfolio-ui/Global/Heading/Heading.module.scss",
+              "hash": "ae94f813b520c09eec7bc042118da3c8e58c7de7"
+            },
+            {
+              "file": "packages/portfolio-ui/Global/Heading/Heading.tsx",
+              "hash": "b269939ba0d08b872690f8da6438ebc7e3385d33",
+              "deps": [
+                "npm:react"
+              ]
+            },
+            {
+              "file": "packages/portfolio-ui/Global/SASS/variables.scss",
+              "hash": "502f2daae70872e6f58b051eca1924e722988d52"
+            },
+            {
+              "file": "packages/portfolio-ui/Global/Spinner/Spinner.module.scss",
+              "hash": "74ba3a1de237599409a6c521293e544716ae9f8e"
+            },
+            {
+              "file": "packages/portfolio-ui/Global/Spinner/Spinner.tsx",
+              "hash": "688e2e48db25f69de9ba7b5c3dfd181ba50459ba",
+              "deps": [
+                "npm:react"
+              ]
+            },
+            {
+              "file": "packages/portfolio-ui/index.d.ts",
+              "hash": "7ba08fa17ccbb3d5eaa4d9c7b435bd44ff43f330"
+            },
+            {
+              "file": "packages/portfolio-ui/jest.config.js",
+              "hash": "8d61fea6cd5b35fcc2b1c24d39a6252cc932e31b"
+            },
+            {
+              "file": "packages/portfolio-ui/next-env.d.ts",
+              "hash": "4f11a03dc6cc37f2b5105c08f2e7b24c603ab2f4"
+            },
+            {
+              "file": "packages/portfolio-ui/next.config.js",
+              "hash": "7922ea7e424f288b2b5118330010a9abb0cf1598",
+              "deps": [
+                "npm:@nrwl/next"
+              ]
+            },
+            {
+              "file": "packages/portfolio-ui/pages/_app.tsx",
+              "hash": "a7b3f1e611ec214da11df8a790815729040c65f4",
+              "deps": [
+                "npm:@chakra-ui/react",
+                "npm:next"
+              ]
+            },
+            {
+              "file": "packages/portfolio-ui/pages/_document.tsx",
+              "hash": "b4e719b70fbaa0820787cb9e59c67d5445ad617d",
+              "deps": [
+                "npm:next",
+                "npm:@chakra-ui/react"
+              ]
+            },
+            {
+              "file": "packages/portfolio-ui/pages/index.tsx",
+              "hash": "daf8c3578d7e5e8cd598b366aa018175c9c54bdc",
+              "deps": [
+                "npm:next"
+              ]
+            },
+            {
+              "file": "packages/portfolio-ui/project.json",
+              "hash": "8033d8f174b692289992b835da4d38373dcaf6bc"
+            },
+            {
+              "file": "packages/portfolio-ui/public/favicon.ico",
+              "hash": "3024018bfa027a209dd5399e0812caa45bbc87a6"
+            },
+            {
+              "file": "packages/portfolio-ui/public/logo192.jpg",
+              "hash": "3024018bfa027a209dd5399e0812caa45bbc87a6"
+            },
+            {
+              "file": "packages/portfolio-ui/public/logo512.jpg",
+              "hash": "3024018bfa027a209dd5399e0812caa45bbc87a6"
+            },
+            {
+              "file": "packages/portfolio-ui/public/manifest.json",
+              "hash": "bbb53e7a03f8103296bea6bade5178e70b9a1d81"
+            },
+            {
+              "file": "packages/portfolio-ui/public/robots.txt",
+              "hash": "e9e57dc4d41b9b46e05112e9f45b7ea6ac0ba15e"
+            },
+            {
+              "file": "packages/portfolio-ui/theme.tsx",
+              "hash": "77144f1a1f8b9e288e62eb7182e29cd1f80b704b",
+              "deps": [
+                "npm:@chakra-ui/react",
+                "npm:@chakra-ui/theme-tools"
+              ]
+            },
+            {
+              "file": "packages/portfolio-ui/tsconfig.json",
+              "hash": "2432688b2a95bebf238442f5d71cec22eab72a62"
+            },
+            {
+              "file": "packages/portfolio-ui/tsconfig.spec.json",
+              "hash": "5b4e7354abd2b2b9a63bcbc0bb5720893b595452"
+            },
+            {
+              "file": "packages/portfolio-ui/Utils/enums.ts",
+              "hash": "22b2bec4913cea72d49cc50057485d05f48502b0"
+            },
+            {
+              "file": "packages/portfolio-ui/Utils/Interface.ts",
+              "hash": "65820162c2a2e2d42cfff73db0d5d0def93f51ae",
+              "deps": [
+                "npm:react-icons"
+              ]
+            }
+          ]
+        }
+      },
+      "blog-ui-e2e": {
+        "name": "blog-ui-e2e",
+        "type": "e2e",
+        "data": {
+          "root": "packages/blog-ui-e2e",
+          "sourceRoot": "packages/blog-ui-e2e/src",
+          "projectType": "application",
+          "targets": {
+            "e2e": {
+              "executor": "@nrwl/cypress:cypress",
+              "options": {
+                "cypressConfig": "packages/blog-ui-e2e/cypress.json",
+                "devServerTarget": "blog-ui:serve"
+              },
+              "configurations": {
+                "production": {
+                  "devServerTarget": "blog-ui:serve:production"
+                }
+              }
+            },
+            "lint": {
+              "executor": "@nrwl/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "packages/blog-ui-e2e/**/*.{js,ts}"
+                ]
+              }
+            }
+          },
+          "tags": [],
+          "implicitDependencies": [
+            "blog-ui"
+          ],
+          "files": [
+            {
+              "file": "packages/blog-ui-e2e/.eslintrc.json",
+              "hash": "696cb8b12127425419f6d2809c5f15a5963d86de"
+            },
+            {
+              "file": "packages/blog-ui-e2e/cypress.json",
+              "hash": "90523d56223470f4b0a4ecb4f923e719428c9e46"
+            },
+            {
+              "file": "packages/blog-ui-e2e/project.json",
+              "hash": "edd761cd671742e15b6322c94f35c8334de7d999"
+            },
+            {
+              "file": "packages/blog-ui-e2e/src/fixtures/example.json",
+              "hash": "294cbed6ce9e0b948b787452e8676aee486cb3be"
+            },
+            {
+              "file": "packages/blog-ui-e2e/src/integration/app.spec.ts",
+              "hash": "4bfcd8fd7516e347f9b787068b31a3442e34242c"
+            },
+            {
+              "file": "packages/blog-ui-e2e/src/support/app.po.ts",
+              "hash": "32934246969c2ecb827ac05677785933a707a54d"
+            },
+            {
+              "file": "packages/blog-ui-e2e/src/support/commands.ts",
+              "hash": "310f1fa0e043ffebbbcf575c5a4d17f13a6b14d6"
+            },
+            {
+              "file": "packages/blog-ui-e2e/src/support/index.ts",
+              "hash": "3d469a6b6cf31eb66117d73e278bcf74f398f1db"
+            },
+            {
+              "file": "packages/blog-ui-e2e/tsconfig.json",
+              "hash": "c4f818ecd40fbce82c3e08bf25cde3043970f8f3"
+            }
+          ]
+        }
+      },
+      "blog-ui": {
+        "name": "blog-ui",
+        "type": "app",
+        "data": {
+          "root": "packages/blog-ui",
+          "sourceRoot": "packages/blog-ui",
+          "projectType": "application",
+          "targets": {
+            "build": {
+              "executor": "@nrwl/next:build",
+              "outputs": [
+                "{options.outputPath}"
+              ],
+              "defaultConfiguration": "production",
+              "options": {
+                "root": "packages/blog-ui",
+                "outputPath": "dist/packages/blog-ui"
+              },
+              "configurations": {
+                "production": {}
+              }
+            },
+            "serve": {
+              "executor": "@nrwl/next:server",
+              "options": {
+                "buildTarget": "blog-ui:build",
+                "dev": true
+              },
+              "configurations": {
+                "production": {
+                  "buildTarget": "blog-ui:build:production",
+                  "dev": false
+                }
+              }
+            },
+            "export": {
+              "executor": "@nrwl/next:export",
+              "options": {
+                "buildTarget": "blog-ui:build:production"
+              }
+            },
+            "test": {
+              "executor": "@nrwl/jest:jest",
+              "outputs": [
+                "coverage/packages/blog-ui"
+              ],
+              "options": {
+                "jestConfig": "packages/blog-ui/jest.config.js",
+                "passWithNoTests": true
+              }
+            },
+            "lint": {
+              "executor": "@nrwl/linter:eslint",
+              "outputs": [
+                "{options.outputFile}"
+              ],
+              "options": {
+                "lintFilePatterns": [
+                  "packages/blog-ui/**/*.{ts,tsx,js,jsx}"
+                ]
+              }
+            }
+          },
+          "tags": [],
+          "files": [
+            {
+              "file": "packages/blog-ui/.eslintrc.json",
+              "hash": "0d061c74dc0a00585df00756517f6e74bec38217"
+            },
+            {
+              "file": "packages/blog-ui/index.d.ts",
+              "hash": "7ba08fa17ccbb3d5eaa4d9c7b435bd44ff43f330"
+            },
+            {
+              "file": "packages/blog-ui/jest.config.js",
+              "hash": "99b5250d833b6e685e0bee012f7b9511cc9e166c"
+            },
+            {
+              "file": "packages/blog-ui/next-env.d.ts",
+              "hash": "4f11a03dc6cc37f2b5105c08f2e7b24c603ab2f4"
+            },
+            {
+              "file": "packages/blog-ui/next.config.js",
+              "hash": "7922ea7e424f288b2b5118330010a9abb0cf1598",
+              "deps": [
+                "npm:@nrwl/next"
+              ]
+            },
+            {
+              "file": "packages/blog-ui/pages/_app.tsx",
+              "hash": "da0e7b82339f877e9959f2abca7b3bf45f55f439",
+              "deps": [
+                "npm:next"
+              ]
+            },
+            {
+              "file": "packages/blog-ui/pages/index.module.scss",
+              "hash": "8a13e21cb3114dc597001050a8afda0a6add8b37"
+            },
+            {
+              "file": "packages/blog-ui/pages/index.tsx",
+              "hash": "c4445419e4dd8c7d2da32bbfe7b4ef55d15b2a41"
+            },
+            {
+              "file": "packages/blog-ui/pages/styles.css",
+              "hash": "7fe31fd45429117eb5aeef6a5d9332da9d9dd9c0"
+            },
+            {
+              "file": "packages/blog-ui/project.json",
+              "hash": "0650033dec0230d8a052e442647f0a822cfae93f"
+            },
+            {
+              "file": "packages/blog-ui/public/.gitkeep",
+              "hash": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+            },
+            {
+              "file": "packages/blog-ui/specs/index.spec.tsx",
+              "hash": "42c94022afd1c1c396f85b24a08d75984b8adb9c",
+              "deps": [
+                "npm:react",
+                "npm:@testing-library/react"
+              ]
+            },
+            {
+              "file": "packages/blog-ui/tsconfig.json",
+              "hash": "2432688b2a95bebf238442f5d71cec22eab72a62"
+            },
+            {
+              "file": "packages/blog-ui/tsconfig.spec.json",
+              "hash": "5b4e7354abd2b2b9a63bcbc0bb5720893b595452"
+            }
+          ]
+        }
+      }
+    },
+    "dependencies": {
+      "portfolio-ui-e2e": [
+        {
+          "source": "portfolio-ui-e2e",
+          "target": "portfolio-ui",
+          "type": "implicit"
+        }
+      ],
+      "portfolio-ui": [],
+      "blog-ui-e2e": [
+        {
+          "source": "blog-ui-e2e",
+          "target": "blog-ui",
+          "type": "implicit"
+        }
+      ],
+      "blog-ui": []
+    }
+  },
+  "affectedProjects": [],
+  "criticalPath": []
+}
