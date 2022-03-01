@@ -4,7 +4,9 @@
     "api": "packages/api",
     "blog-ui": "packages/blog-ui",
     "blog-ui-e2e": "packages/blog-ui-e2e",
+    "errors": "packages/errors",
     "portfolio-ui": "packages/portfolio-ui",
-    "portfolio-ui-e2e": "packages/portfolio-ui-e2e"
+    "portfolio-ui-e2e": "packages/portfolio-ui-e2e",
+    "utils": "packages/utils"
   }
 }
